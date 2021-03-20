@@ -9,6 +9,7 @@ export class orderApiService
 
     constructor(private httpclient: HttpClient) {}
     getOrders(): Observable<any> {
-        return this.httpclient.get("http://localhost:8080/rom/orders");
+        //TODO change this once DNS entry made
+        return this.httpclient.get("http://3.234.98.4:8080/rom/orders");
     }
 }
