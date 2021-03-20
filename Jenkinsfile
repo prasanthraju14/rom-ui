@@ -1,5 +1,10 @@
 node{
   
+   stage('Git Checkout'){
+    sh "rm -rf $WORKSPACE/*"
+    git 'https://github.com/Infuser-s/rom-ui.git'
+  }
+  
   stage('Image creation'){
     sh "docker build -t docker-registry:rom-ui-${BUILD_NUMBER} ."
   }
