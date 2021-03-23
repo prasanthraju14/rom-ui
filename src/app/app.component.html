@@ -51,7 +51,7 @@ legend {
 <div class="container">
  <div class="form-group">
   <label for="usr" style="font-weight: bold;">Customer [Order Number] or [* for All]:</label>
-  <input type="text" #titleInput class="form-control">
+  <input type="text" #titleInput class="form-control" (keyup.enter)="search(titleInput.value)">
   </div>
   <button type="button" (click) = "search(titleInput.value)" class="btn btn-primary">Search!</button>
 </div>
