@@ -15,14 +15,17 @@ export class AppComponent {
   }
  
   ngOnInit() {
+    this.search();
+  }
 
+  public search() {
     this._orderApiService.getOrders()
     .subscribe
     (
       data=>
       {
+        console.log('Data is received - Result - ', data);
           this.list_rom_orders = data;
-
       }
     )
   }
