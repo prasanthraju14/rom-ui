@@ -9,7 +9,7 @@ legend {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-  h1 {color:green;}
+  h1 {color:green; text-align: center;}
   h2 {color:grey;}
   h3 {color:lightblue;}
 
@@ -43,14 +43,14 @@ legend {
 <br>
 <br>
 
-<h1 class="md-display-3">Customer Orders:</h1>
+<h1 class="md-display-3">Retail Order Management System</h1>
 
 <br>
 
 <legend>Please enter:</legend>
 <div class="container">
  <div class="form-group">
-  <label for="usr">Customer [Order Number] or [* for All]:</label>
+  <label for="usr" style="font-weight: bold;">Customer [Order Number] or [* for All]:</label>
   <input type="text" #titleInput class="form-control">
   </div>
   <button type="button" (click) = "search(titleInput.value)" class="btn btn-primary">Search!</button>
@@ -58,6 +58,9 @@ legend {
 
 <br>
 
+<legend>Customer Order Details</legend>
+<div class="container">
+ <div class="form-group">
 <table>
   <tr>
     <th>Order Number</th>
@@ -70,7 +73,8 @@ legend {
   </tr>
 
 </table>
-
+</div>
+</div>
 <br>
 <br>
 
