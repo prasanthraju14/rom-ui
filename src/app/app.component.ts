@@ -17,7 +17,7 @@ export class AppComponent {
   }
  
   ngOnInit() {
-    this.search('*');
+    //this.search('*');
   }
 
   public search(searchStr : String) {
