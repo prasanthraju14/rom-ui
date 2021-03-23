@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵEMPTY_ARRAY } from '@angular/core';
 import { orderApiService } from './services/romorderapi.service';
 
 @Component({
@@ -9,17 +9,21 @@ import { orderApiService } from './services/romorderapi.service';
 export class AppComponent {
   title = 'rom-ui';
   list_rom_orders: any;
+  first_time = 0;
+  searchStr = '*';
 
   constructor(private _orderApiService: orderApiService) {
 
   }
  
   ngOnInit() {
-    this.search();
+    this.search('*');
   }
 
-  public search() {
-    this._orderApiService.getOrders()
+  public search(searchStr : String) {
+    //alert("called search api!");
+    console.log('search function called.', searchStr);
+    this._orderApiService.getOrders(searchStr)
     .subscribe
     (
       data=>

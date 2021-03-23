@@ -44,15 +44,16 @@ legend {
 <h2 class="md-display-1">End-point: Get Request (URL/rom/search/"*")</h2>
 <h3 class="md-headline">Last updated: 8:46 am, 23 Mar IST</h3>
 
+<br>
 
-<form>
-  <fieldset>
-   <legend>[TBD] Please enter:</legend>
-   <label style="color:black" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" for="ordernumber">Order Number: </label>
-   <input type="text" id="ordernumber" name="ordernumber"><br><br>
-   <button (click)="search" class="btn btn-primary btn-block btn-lg">Search</button>
-  </fieldset>
- </form>
+<legend>[TBD] Please enter:</legend>
+<div class="container">
+ <div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" #titleInput class="form-control">
+  </div>
+  <button type="button" (click) = "search(titleInput.value)" class="btn btn-primary">Search!</button>
+</div>
 
 <br>
 
