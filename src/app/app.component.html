@@ -60,6 +60,48 @@ legend {
 <br>
 
 <legend>Customer Order Details</legend>
+
+<div class="container">
+ <div class="form-group">
+
+<table mdbTable mdbTableScroll scrollY="true" maxHeight="200" bordered="true">
+  <thead>
+    <tr>
+      <th>Order Number</th>
+      <th>Order Created On</th>
+    </tr>
+    <!--
+    <tr>
+      <th *ngFor="let head of list_rom_orders; let i = index" scope="col">{{head}}</th>
+    </tr>
+    -->
+  </thead>
+  <tbody>
+    <tr *ngFor="let el of list_rom_orders; let i = index">
+      <!--<th scope="row">{{el.id}}</th>  -->
+      <td>{{el.id}}</td>
+      <td>{{el.createdAt}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+
+<br>
+<br>
+
+<legend>Just FYI!!</legend>
+<div class="container">
+ <div class="form-group">
+  <label for="usr">End-point: Get Request (URL/rom/search/"*")</label>
+  <br>
+  <label for="usr">Last updated: 6:15 pm, 04 Apr IST</label>
+</div>
+
+
+<!--
+<legend>Customer Order Details</legend>
 <div class="container">
  <div class="form-group">
 <table>
@@ -74,15 +116,4 @@ legend {
   </tr>
 
 </table>
-</div>
-</div>
-<br>
-<br>
-
-<legend>Just FYI!!</legend>
-<div class="container">
- <div class="form-group">
-  <label for="usr">End-point: Get Request (URL/rom/search/"*")</label>
-  <br>
-  <label for="usr">Last updated: 6:27 pm, 23 Mar IST</label>
-</div>
+-->
